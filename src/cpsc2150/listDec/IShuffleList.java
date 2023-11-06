@@ -17,8 +17,8 @@ public interface IShuffleList<T> extends List<T> {
     default void shuffle(int swaps) {
         Random rand = new Random();
         for (int k = 0; k < swaps; k++) {
-            int i = rand.nextInt(); // Assuming list size is not provided, this will need adjustment
-            int j = rand.nextInt(); // Assuming list size is not provided, this will need adjustment
+            int i = rand.nextInt(size()); // Assuming list size is not provided, this will need adjustment
+            int j = rand.nextInt(size()); // Assuming list size is not provided, this will need adjustment
             swap(i, j);
         }
     }
@@ -33,10 +33,10 @@ public interface IShuffleList<T> extends List<T> {
      * @post The values at positions i and j in the list have been exchanged.
      */
     default void swap(int i, int j) {
-         Object temp = list.get(i);
+         T temp = (T) get(i);
 
-         list.set(i, list.get(j));
-         list.set(j, temp);
+         set(i, (T) get(j));
+         set(j, temp);
     }
 
 }
