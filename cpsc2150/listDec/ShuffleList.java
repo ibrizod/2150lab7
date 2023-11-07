@@ -1,3 +1,4 @@
+
 package cpsc2150.listDec;
 
 import java.util.Collection;
@@ -27,9 +28,9 @@ public class ShuffleList<T> implements IShuffleList<T> {
      *
      * @param l
      *            An existing implementation of {@link List}.
-     * 
+     *
      * @pre l != null
-     * 
+     *
      * @post myList = l
      */
     public ShuffleList(List<T> l) {

@@ -36,10 +36,10 @@ public interface IShuffleList<T> extends List<T> {
      * @post The values at positions i and j in the list are swapped
      */
     default void swap(int i, int j) {
-         T temp = (T) get(i);
+        T temp = (T) get(i);
 
-         set(i, (T) get(j));
-         set(j, temp);
+        set(i, (T) get(j));
+        set(j, temp);
     }
 
 }
