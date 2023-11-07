@@ -1,8 +1,5 @@
 package cpsc2150.listDec;
 
-import cpsc2150.listDec.IShuffleList;
-import cpsc2150.listDec.ShuffleList;
-
 import java.util.ArrayList;
 
 public class ShuffleApp {
